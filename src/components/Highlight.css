@@ -1,0 +1,29 @@
+.high-container{
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.high-text{
+    margin-left: 250px;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+
+.high-text h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   text-align: left;
+}
+
+.menu-btn{
+    background-color: yellow;
+    border-radius: 15%;
+    width: fit-content;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-right: 380px;
+}

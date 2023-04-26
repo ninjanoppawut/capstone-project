@@ -4,6 +4,7 @@ import './Nav.css';
 function Nav() {
   return (
     <nav >
+      
         <ul className='nav-items'>
           <div className='logo-container'>
             <img src='./logo1.png' alt='logo'></img>

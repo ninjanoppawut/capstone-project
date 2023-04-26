@@ -1,0 +1,46 @@
+.hero-container{
+    background: linear-gradient(to bottom, #57bb8a 90%, #fff 10%);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.hero-text{
+    margin-left: 250px;
+    margin-bottom: 10px;
+    padding: 1%;
+}
+
+.hero-text h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   text-align: left;
+}
+
+.hero-text h5{
+    display: flex;
+    font-size: 0.75rem;
+}
+
+.hero-text p {
+    text-align: left;
+    font-size: 0.6rem;
+}
+
+.food-container img{
+    height: 180px;
+    margin-top: 10px;
+    margin-right: 350px;
+    width: 150px;
+    border-radius: 15%;
+}
+
+.reserve-btn{
+    background-color: yellow;
+    border-radius: 15%;
+    width: fit-content;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-right: 380px;
+}
