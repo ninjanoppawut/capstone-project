@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.css'
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -26,15 +27,20 @@ export const highlightCard = [
 
 function Card({title, description, price, ImageSrc}) {
   return (
+    
+       
     <div className='card'>
         <img src={ImageSrc} alt={title} ></img>
         <div className='card-container'>
-        <h2 className="card-title">{title}</h2>
-        <p className="card-price">{price}</p>
+            <div className='card-header'>
+                <h2 className="card-title">{title}</h2>
+                <p className="card-price">{price}</p>
+            </div>
         <p className="card-description">{description}</p>
         <h5>Order Delivery</h5>
         </div>
     </div>
+    
   )
 }
 

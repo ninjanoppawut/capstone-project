@@ -2,16 +2,18 @@ import React from 'react'
 import "./Highlight.css"
 import Card from './Card'
 import { highlightCard } from './Card'
+import Testimonial from './Testimonial'
+
 
 function Highlight() {
   return (
     <div className='high-container'>
         <div className='high-header'>
-               <h2>Specials </h2>
-        </div>
+            <h2>Specials </h2>
         <button className='online-menu-btn'>
             Online Menu
         </button>
+        </div>
       <div className='high-card'>
         {highlightCard.map((card, index) => (
             <Card
@@ -22,7 +24,10 @@ function Highlight() {
                 ImageSrc={card.ImageSrc}
             />
         ))}
-    </div>
+        </div>
+        <div>
+            <Testimonial/>
+        </div>
     </div>
   )
 }

@@ -1,31 +1,37 @@
 .high-container{
     background: white;
     color: black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-auto-flow: row;
 }
 
 .high-text{
    margin: 0;
+   margin-left: 200px;
 }
 
 .high-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
   }
 
 .high-text h2{
     font-family:Georgia, 'Times New Roman', Times, serif;
-   
+}
+
+.high-header h2{
+    margin-left: 250px;
 }
 
 .online-menu-btn{
+    margin-top: 15px;
+    margin-right: 350px;
     padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
+    border-radius: 15px;
+    height: 45px;
+    background-color: #f4ce14;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;

@@ -1,5 +1,5 @@
 .hero-container{
-    background: linear-gradient(to bottom, #57bb8a 90%, #fff 10%);
+    background: linear-gradient(to bottom, #264f2a 90%, #fff 10%);
     color: black;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@
 }
 
 .reserve-btn{
-    background-color: yellow;
+    background-color:#f4ce14;
     border-radius: 15%;
     width: fit-content;
     align-items: center;

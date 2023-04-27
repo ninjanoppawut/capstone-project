@@ -5,16 +5,34 @@ import './App.css';
 
 // import Header from './components/Header';
 import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
+// import Main from './components/Main';
+// import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Menu from './components/pages/Menu';
+import Reservations from './components/pages/Reservations';
+import Onlineorder from './components/pages/Onlineorder';
+import Login from './components/pages/Login';
 
 function App() {
   return (
     <div>
       {/* <Header/> */}
+      <Router>
       <Nav/>
-      <Main/>
-      <Footer/>
+        <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/about' element={<About/>}></Route>
+            <Route path='/menu' element={<Menu/>}></Route>
+            <Route path='/reservations' element={<Reservations/>}></Route>
+            <Route path='/onlineorder' element={<Onlineorder/>}></Route>
+            <Route path='/login' element={<Login/>}></Route>
+        </Routes>
+      </Router>
+      {/* <Main/>
+      <Footer/> */}
     </div>
   );
 }
