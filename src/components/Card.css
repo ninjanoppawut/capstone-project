@@ -43,7 +43,12 @@
     margin-left: 75px;
 }
 
-img {
+.card-footer h5{
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.card img {
     border-radius: 25px 25px 0 0;
     width: 250px;
     height: 200px;

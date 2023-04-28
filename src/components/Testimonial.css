@@ -1,5 +1,38 @@
-.main-container {
+.test-card {
+    display: inline-flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 gray;
+    transition: 0.3s;
+    border-radius: 25px;
     align-items: center;
+    margin-left: 75px;
+    margin-left: 75px;
+    margin-top: 50px;
+    width: 150px;
+    max-height: 180px;
+}
+
+.test-card:hover{
+    box-shadow: 0 8px 16px 0 gray;
+}
+
+.test-container {
+    display: grid;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.test-container p {
+    font-size: 0.75rem;
+}
+
+.test-container h3{
+    font-size: 0.75rem;
+}
+
+.main-container {
     text-align: center;
-    margin-top: 275px;
+    margin-top: 100px;
 }

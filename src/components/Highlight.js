@@ -2,7 +2,7 @@ import React from 'react'
 import "./Highlight.css"
 import Card from './Card'
 import { highlightCard } from './Card'
-import Testimonial from './Testimonial'
+
 
 
 function Highlight() {
@@ -24,9 +24,6 @@ function Highlight() {
                 ImageSrc={card.ImageSrc}
             />
         ))}
-        </div>
-        <div>
-            <Testimonial/>
         </div>
     </div>
   )
