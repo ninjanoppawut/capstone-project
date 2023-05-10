@@ -12,7 +12,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Menu from './components/pages/Menu';
-import Reservations from './components/pages/Reservations';
+import Reservation from './components/pages/Reservation';
+
 import Onlineorder from './components/pages/Onlineorder';
 import Login from './components/pages/Login';
 
@@ -26,7 +27,7 @@ function App() {
             <Route path='/' element={<Home/>}></Route>
             <Route path='/about' element={<About/>}></Route>
             <Route path='/menu' element={<Menu/>}></Route>
-            <Route path='/reservations' element={<Reservations/>}></Route>
+            <Route path='/reservation' element={<Reservation/>}></Route>
             <Route path='/onlineorder' element={<Onlineorder/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
         </Routes>

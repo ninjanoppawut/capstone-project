@@ -1,7 +1,7 @@
 import React from 'react'
 import './Testimonial.css'
 import './Card.css'
-
+import { FaStar } from 'react-icons/fa'
 
 const testCard = [
   {
@@ -31,12 +31,24 @@ const testCard = [
   },
 ];
 
+function StarRating() {
+  return (
+    <div>
+      {[...Array(5)].map(star => {
+        return <FaStar size={10}/>
+      })}
+    </div>
+  )
+}
+
 function TestimonialData({user, score, review}) {
   return (
     <div className='test-card'>
       <div className='test-container'>
         <h3>Name:{user}</h3>
-        <p>Score:{score}</p>
+        <p>Score:{score}
+        <StarRating/>
+        </p>
         <p>{review}</p>
       </div>
     </div>
