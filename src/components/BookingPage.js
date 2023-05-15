@@ -16,7 +16,7 @@ export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange
   }
 
   return (
-    <div>
+    <div className='booking-form'>
       <form
         onSubmit={handleSubmit}
         style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
@@ -60,7 +60,7 @@ export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input type="submit" value="Make Your reservation" />
+        <input id='submit-btn' type="submit" value="Make Your reservation" />
       </form>
     </div>
   );
@@ -79,11 +79,14 @@ function BookingPage() {
     }
   }, []);
 
+  const [bookingConfirmed, setBookingConfirmed] =useState(false);
+
   function handleFormSubmit(formData) {
     console.log(formData);
     const success = submitAPI(formData);
+
     if (success) {
-      alert('Booking successful!');
+      setBookingConfirmed(true)
     } else {
       alert('Booking failed.');
     }
@@ -96,12 +99,13 @@ function BookingPage() {
 
   return (
     <div>
-      <h1>This is Main</h1>
-      <BookingForm
+      {bookingConfirmed ? (
+        <ConfirmedBooking/>
+      ) : (<BookingForm
         availableTimes={availableTimes}
         handleFormSubmit={handleFormSubmit}
         handleDateChange={handleDateChange}
-      />
+      />)}
     </div>
   );
 }
