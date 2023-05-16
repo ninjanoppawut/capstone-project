@@ -38,7 +38,9 @@ function Card({title, description, price, ImageSrc}) {
             </div>
         <p className="card-description">{description}</p>
         <div className='card-footer'>
-            <h5>Order Delivery</h5>
+            <button className='order-btn'>
+                Order Delivery
+            </button>
         </div>
         </div>
     </div>

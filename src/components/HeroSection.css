@@ -15,17 +15,20 @@
 
 .hero-text h1{
     font-family:Georgia, 'Times New Roman', Times, serif;
-   text-align: left;
+    text-align: left;
+    color: #fff;
 }
 
 .hero-text h5{
     display: flex;
     font-size: 0.75rem;
+    color: #fff;
 }
 
 .hero-text p {
     text-align: left;
     font-size: 0.6rem;
+    color: #fff;
 }
 
 .food-container img{
@@ -38,8 +41,9 @@
 
 .reserve-btn{
     background-color:#f4ce14;
-    border-radius: 15%;
+    border-radius: 10px;
     width: fit-content;
+    height: 30px;
     align-items: center;
     margin-bottom: 1%;
     margin-right: 380px;

@@ -41,3 +41,11 @@
     display: flex;
     flex-direction: row;
 }
+
+.order-btn{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}

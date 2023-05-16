@@ -2,6 +2,8 @@ import React, { useState, useReducer } from 'react';
 import { fetchAPI, submitAPI } from './API';
 import ConfirmedBooking from './ConfirmedBooking';
 
+
+
 export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange }) {
   const [formData, setFormData] = useState({
     time: availableTimes[0],
@@ -9,11 +11,35 @@ export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange
     occasion: 'Birthday'
   });
 
+  const [ errors, setErrors ] = useState({});
+
   function handleSubmit(e) {
     e.preventDefault();
-    handleFormSubmit(formData);
-    console.log('Form Submitted')
+    const validationErrors = validateForm();
+    
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      setErrors({});
+      handleFormSubmit(formData);
+      console.log('Form Submitted');
+    }
   }
+
+  function validateForm() {
+    const errors = {};
+
+    if (!formData.date) {
+      errors.date = 'Please select a date';
+    }
+
+    if (!formData.time) {
+      errors.time = 'Please select a time';
+    }
+
+    return errors;
+  }
+
 
   return (
     <div className='booking-form'>
@@ -27,10 +53,12 @@ export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange
           onChange={(e) => {
             setFormData({ ...formData, date: e.target.value });
             handleDateChange(e.target.value);
+            setErrors({});
           }}
           type="date"
           id="res-date"
         />
+        {errors.date && <span className="error">{errors.date}</span>}
         <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
@@ -69,6 +97,7 @@ export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange
 function BookingPage() {
   const [date, setDate] = useState('');
   const [availableTimes, dispatch] = useReducer((state, action) => {
+
     switch (action.type) {
       case 'INIT':
         return fetchAPI(new Date()); // initialize with today's date
@@ -111,3 +140,4 @@ function BookingPage() {
 }
 
 export default BookingPage;
+
