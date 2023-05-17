@@ -1,11 +1,17 @@
+.reservation{
+    background-image: url("../../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
 .booking-form {
     display: flex;
     justify-content: center;
     padding: 30px;
+    
 }
 
 form {
-    background-color:antiquewhite;
+    background-color:rgba(229, 225, 225, 0.5);
     justify-content: center;
     padding: 30px 80px;
     
@@ -32,4 +38,17 @@ select {
     border: none;
     padding: 10px;
     width: 100%;
+}
+
+.confirmbooking {
+    margin-top: 20vh;
+    background-color:#f4ce14;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error{
+    color: red;
 }

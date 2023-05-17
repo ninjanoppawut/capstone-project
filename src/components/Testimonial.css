@@ -1,7 +1,7 @@
 .test-card {
     display: inline-flex;
     flex-direction: row;
-    background-color: antiquewhite;
+    background-color: #f7e89c;
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 gray;
     transition: 0.3s;
@@ -10,12 +10,18 @@
     margin-left: 75px;
     margin-left: 75px;
     margin-top: 50px;
-    width: 150px;
+    width: 200px;
     max-height: 180px;
 }
 
 .test-card:hover{
     box-shadow: 0 8px 16px 0 gray;
+    background-color: #f4ce14;
+}
+
+.slider{
+    
+    width: fit-content;
 }
 
 .test-container {

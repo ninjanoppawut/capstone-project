@@ -1,7 +1,11 @@
 import React from 'react'
+import { useState } from 'react'
 import './Testimonial.css'
 import './Card.css'
-import { FaStar } from 'react-icons/fa'
+import { Input } from '@chakra-ui/react';
+
+
+
 
 const testCard = [
   {
@@ -29,31 +33,68 @@ const testCard = [
     score: 5,
     review: "Fair enough"
   },
+  {
+    user:"Tim",
+    score: 5,
+    review: "Fair enough"
+  },
+  {
+    user:"Scott",
+    score: 5,
+    review: "Fair enough"
+  },
 ];
 
-function StarRating() {
+function Slider({onChange}) {
+  const [value, setValue] = useState(0);
+
+  const handleSliderChange = (e) => {
+    const newValue = parseInt(e.target.value);
+    setValue(newValue)
+    onChange(newValue)
+  }
+
   return (
-    <div>
-      {[...Array(5)].map(star => {
-        return <FaStar size={10}/>
-      })}
-    </div>
+    <>
+    <input
+    className='slider'
+    type='range'
+    min={0}
+    max={10}
+    value={value}
+    onChange={handleSliderChange}/>
+    <span>{value}</span>
+    </>
   )
 }
 
-function TestimonialData({user, score, review}) {
+
+function TestimonialData({ user, score, review }) {
+  const [rating, setRating] = useState('');
+
+  const handleScoreChange = (newScore) => {
+    if (newScore > 7) {
+      setRating('Good');
+    } else if (newScore >= 4 && newScore <= 6) {
+      setRating('Okay');
+    } else {
+      setRating('Bad');
+    }
+  };
+
   return (
-    <div className='test-card'>
-      <div className='test-container'>
-        <h3>Name:{user}</h3>
-        <p>Score:{score}
-        <StarRating/>
+    <div className="test-card">
+      <div className="test-container">
+        <h3>Name: {user}</h3>
+        <p>
+          Score: <Slider onChange={handleScoreChange} />
         </p>
-        <p>{review}</p>
+        <p>Restaurant is {rating}</p>
       </div>
     </div>
-  )
-};
+  );
+}
+
 
 
 function Testimonial() {

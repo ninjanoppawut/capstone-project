@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from 'react';
 import { fetchAPI, submitAPI } from './API';
 import ConfirmedBooking from './ConfirmedBooking';
+import './pages/Reservation.css'
 
 
 
@@ -31,10 +32,6 @@ export function BookingForm({ availableTimes, handleFormSubmit, handleDateChange
 
     if (!formData.date) {
       errors.date = 'Please select a date';
-    }
-
-    if (!formData.time) {
-      errors.time = 'Please select a time';
     }
 
     return errors;
